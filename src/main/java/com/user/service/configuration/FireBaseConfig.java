@@ -14,11 +14,11 @@ public class FireBaseConfig {
 
     FireBaseConfig() throws IOException {
         FileInputStream serviceAccount =
-                new FileInputStream("path");
+                new FileInputStream("D://user-service//src//main//resources//future-synapse-429515-a1-firebase-adminsdk-3rp7x-a3fdc9f6ab.json");
 
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .setDatabaseUrl("")
+                .setDatabaseUrl("https://future-synapse-429515-a1-default-rtdb.firebaseio.com")
                 .build();
 
         FirebaseApp.initializeApp(options);
